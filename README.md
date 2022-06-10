@@ -8,7 +8,7 @@
 
 <p>&nbsp;</p>
 
-<p><strong>what do this app does ?</strong></p>
+<p><strong>what it does ?</strong></p>
 
 <p>task of this app is very simple to note projects so you wont miss anything.</p>
 
