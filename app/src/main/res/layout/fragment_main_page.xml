@@ -21,7 +21,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="35dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Hello, dyno"
+            android:text="Hello, there !!"
             android:textSize="24sp" />
 
 
