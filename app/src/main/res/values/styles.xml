@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="projects">
+        <![CDATA[<style name="projects">  <item name="android:textSize"> 22sp </item>  <item name="android:textColor"> #666666 </item>  </style>]]></style>
+</resources>

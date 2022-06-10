@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_nav"
+    app:startDestination="@id/main_page">
+
+    <fragment
+        android:id="@+id/main_page"
+        android:name="com.example.dailytaskhelper.fragments.main_page"
+        android:label="main_page" >
+        <action
+            android:id="@+id/action_main_page_to_todo_manager"
+            app:destination="@id/todo_manager" />
+    </fragment>
+    <fragment
+        android:id="@+id/todo_manager"
+        android:name="com.example.dailytaskhelper.fragments.todo_manager"
+        android:label="fragment_todo_manager"
+        tools:layout="@layout/fragment_todo_manager" >
+        <action
+            android:id="@+id/action_todo_manager_to_main_page"
+            app:destination="@id/main_page" />
+        <action
+            android:id="@+id/action_todo_manager_pop"
+            app:popUpTo="@id/todo_manager"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/project_card"
+    android:layout_width="wrap_content"
+    android:layout_height="150dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:clipToOutline="true"
+    app:cardBackgroundColor="@color/unknown"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.382"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="1dp">
+
+        <ImageView
+            android:id="@+id/pr_icon"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/android_logomark" />
+
+        <TextView
+            android:id="@+id/project_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:text="OrderIt"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/task_main_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/pr_icon" />
+
+        <TextView
+            android:id="@+id/due_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="16dp"
+            android:padding="5dp"
+            android:text="2 days left"
+            android:textColor="#00E676"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/pr_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pr_icon"
+            app:layout_constraintTop_toTopOf="@+id/pr_icon"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ProgressBar
+            android:id="@+id/project_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:max="21"
+            android:progress="2"
+            android:progressDrawable="@drawable/progress_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/project_task"
+            app:layout_constraintStart_toStartOf="@+id/task_main_detail" />
+
+        <TextView
+            android:id="@+id/task_main_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:text=" Progress :"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/project_title" />
+
+        <TextView
+            android:id="@+id/project_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="2/21"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/task_main_detail"
+            app:layout_constraintEnd_toEndOf="@+id/project_title"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/task_main_detail"
+            app:layout_constraintTop_toTopOf="@+id/task_main_detail" />
+
+        <ImageButton
+            android:id="@+id/delete"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/due_period"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/due_period"
+            app:layout_constraintTop_toTopOf="@+id/due_period"
+            app:layout_constraintVertical_bias="0.631"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
